@@ -7,18 +7,6 @@ enum Language {
   }
 
 export default class GraphQueryFactory{
-private static instance: GraphQueryFactory;
-
-public constructor (){
-    if (!GraphQueryFactory.instance){
-        GraphQueryFactory.instance = new GraphQueryFactory()
-        return GraphQueryFactory.instance
-    }
-
-    return GraphQueryFactory.instance
-}
-
-
 
 public instantiate (language: Language, endpoint:string){
     if(language === Language.Gremlin){
